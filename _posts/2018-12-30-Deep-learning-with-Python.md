@@ -11,9 +11,9 @@ tag: Books
 
 
 ## Part 1 Fundamentals of deep learning
-
+<br><br>
 主要做摘要、记录用。后续会进行翻译以及整合。
-
+<br><br>
 #### Chapter 1 What is deep learning
 
 ##### 1.1 AI > ML > DL
@@ -31,6 +31,7 @@ tag: Books
 - Probabilitistic modeling :
   - Naive Bayes algorithm -> assuming that the features in the input data are all independent (a strong, or “naive” assumption)
   - logistic regression -> a classification algorithm
+
 - Kernel methods :
   - SVM: aim at solving classification problems by finding good decision boundaries (see figure 1.10) between two sets of points belonging to two different categories.
     - The data is mapped to a new high-dimensional representation where the decision boundary can be expressed as a hyperplane (if the data was two- dimensional, as in figure 1.10, a hyperplane would be a straight line). 
@@ -49,7 +50,7 @@ tag: Books
 ##### 1.3 Why now Why deep learning.
 
 - Hardware, Datasets and benchmarks, Algorithmic advances
-
+<br><br>
 #### Chapter 2 the mathematical building blocks of neural networks
 
 ##### 2.1 A first look at a neural network
@@ -91,7 +92,7 @@ tag: Books
 
 - Learning happens by drawing random batches of data samples and their targets, and computing the gradient of the network parameters with respect to the loss on the batch. The network parameters are then moved a bit (the magnitude of the move is defined by the learning rate) in the opposite direction from the gradient.
 - The entire learning process is made possible by the fact that neural networks are chains of differentiable tensor operations, and thus it’s possible to apply the chain rule of derivation to find the gradient function mapping the current parameters and current batch of data to a gradient value.
-
+<br><br>
 #### Chapter 3 Getting started with neural networks
 
 ##### 3.1 Anatomy of a neural network
@@ -130,7 +131,7 @@ tag: Books
   - Replace each point with an exponential moving average of the previous points, to obtain a smooth curve.
 
 - When little training data is available, it’s preferable to use a small network with few hidden layers (typically only one or two), in order to avoid severe overfitting.
-
+<br><br>
 #### Chapter 4 Fundamentals of machine learning
 
 ##### 4.1 Four branches of machine learning
