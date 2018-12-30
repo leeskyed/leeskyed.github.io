@@ -46,22 +46,22 @@ tag: Books
 - incremental, layer-by-layer way in which increasingly complex representations are developed, and the fact that these intermediate incremental representations are learned jointly,
 - shallow problem XGBT ; perceptual problem Keras
 
-#####1.3 Why now Why deep learning.
+##### 1.3 Why now Why deep learning.
 
 - Hardware, Datasets and benchmarks, Algorithmic advances
 
 #### Chapter 2 the mathematical building blocks of neural networks
 
-#####2.1 A first look at a neural network
+##### 2.1 A first look at a neural network
 
-#####2.2 Data representations for neural networks
+##### 2.2 Data representations for neural networks
 
 - Vector data
 - Timeseries data or sequence data
 - Image data: Images typically have three dimensions: height, width, and color depth. Although grayscale images (like our MNIST digits) have only a single color channel and could thus be stored in 2D tensors, by convention image tensors are always 3D, with a one- dimensional color channel for grayscale images.
 - Video data
 
-#####2.3 The gears of neural networks: tensor operation
+##### 2.3 The gears of neural networks: tensor operation
 
 - Element-wise operation: operations that are applied independently to each entry in the tensors being considered. This means these operations are highly amenable to massively parallel implementations.
 - Broadcasting: the smaller tensor will be broadcasted to match the shape of larger tensor.
@@ -71,7 +71,7 @@ tag: Books
 - Tensor reshaping
 - Geometric interpretation of tensor operations
 
-#####2.4 The engine of neural networks: gradient-based optimization
+##### 2.4 The engine of neural networks: gradient-based optimization
 
 - derivative
 - gradient
@@ -85,24 +85,24 @@ tag: Books
     - 注意到一般梯度下降方法更新的是位置，或者说时位移，通俗的说就是在这个点还没达到最优值，那我沿着负梯度方向迈一步试试；而momentum update更新的是速度，通俗说就是这个点没达到最优值，那我沿着负梯度方向走快点试试，然后再更新位移。
     - 这里超参数mu是为了保证系统最后收敛到局部值，比如我现在快到局部最小点了，因此速度更新量越来越小（梯度接近于0），但是速度有啊，有速度就会继续走，因此加入小于1的mu使每次迭代后速度降下来，最后为0也就不走了。
 
-#####2.5 Looking back at our first example
+##### 2.5 Looking back at our first example
 
-#####2.6 Summary
+##### 2.6 Summary
 
 - Learning happens by drawing random batches of data samples and their targets, and computing the gradient of the network parameters with respect to the loss on the batch. The network parameters are then moved a bit (the magnitude of the move is defined by the learning rate) in the opposite direction from the gradient.
 - The entire learning process is made possible by the fact that neural networks are chains of differentiable tensor operations, and thus it’s possible to apply the chain rule of derivation to find the gradient function mapping the current parameters and current batch of data to a gradient value.
 
 #### Chapter 3 Getting started with neural networks
 
-#####3.1 Anatomy of a neural network
+##### 3.1 Anatomy of a neural network
 
 - Loss function: For instance, you’ll use binary crossentropy for a two-class classification problem, categorical crossentropy for a many-class classification problem, mean- squared error for a regression problem, connectionist temporal classification (CTC) for a sequence-learning problem, and so on.
 
-#####3.2 Keras
+##### 3.2 Keras
 
-#####3.3 Setting up a deep-learning workstation
+##### 3.3 Setting up a deep-learning workstation
 
-#####3.4 Classifying movie reviews: a binary classification example
+##### 3.4 Classifying movie reviews: a binary classification example
 
 - What are activation functions, and why are they necessary?
   Without an activation function like relu (also called a non-linearity), the Dense layer would consist of two linear operations—a dot product and an addition:
@@ -113,11 +113,11 @@ tag: Books
 - 'Keras.History' object has a mem- ber history, which is a dictionary containing data about everything that happened during training.
 - Stacks of Dense layers with relu activations can solve a wide range of problems
 
-#####3.5 Classifying newswires: a multiclass classification example
+##### 3.5 Classifying newswires: a multiclass classification example
 
 - The importance of having sufficiently large intermediate layers. This drop is mostly due to the fact that you’re trying to compress a lot of information (enough information to recover the separation hyperplanes of 46 classes) into an intermediate space that is too low-dimensional. The network is able to cram most of the necessary information into these eight-dimensional representations, but not all of it. 中间层不能比输出层小，不然信息压缩，部分丢失。
 
-#####3.6 Predicting house prices: a regression example
+##### 3.6 Predicting house prices: a regression example
 
 - Again, logistic regression isn’t a regression algorithm—it’s a classification algorithm.
 - feature-wise normalization: for each feature in the input data (a column in the input data matrix), you subtract the mean of the feature and divide by the standard deviation, so that the feature is centered around 0 and has a unit standard deviation.
@@ -133,7 +133,7 @@ tag: Books
 
 #### Chapter 4 Fundamentals of machine learning
 
-#####4.1 Four branches of machine learning
+##### 4.1 Four branches of machine learning
 
 - Supervised learning
   - It consists of learning to map input data to known targets (also called annotations), given a set of examples (often annotated by humans).
@@ -155,7 +155,7 @@ tag: Books
   - Multilabel classification—A classification task where each input sample can be assigned multiple labels. For instance, a given image may contain both a cat and a dog and should be annotated both with the “cat” label and the “dog” label. The number of labels per image is usually variable.
   - Mini-batch or batch—A small set of samples (typically between 8 and 128) that are processed simultaneously by the model. The number of samples is often a power of 2, to facilitate memory allocation on GPU. When training, a mini-batch is used to compute a single gradient-descent update applied to the weights of the model.
 
-#####4.2 Evaluating machine-learning models
+##### 4.2 Evaluating machine-learning models
 
 - generalize—that perform well on never-before-seen data
 - Hyperparameters -> the number/size of layers and  Parameters -> network's weights
@@ -171,7 +171,7 @@ tag: Books
   - The arrow of time -- temporal leak
   - Redundancy in your data -- training set adn validation set are disjiont
 
-#####4.3 Data preprocessing, feature engineering, and feature learning
+##### 4.3 Data preprocessing, feature engineering, and feature learning
 
 - Data preprocessing aims at making the raw data at hand more amenable to neural networks.
   - VECTORIZATION
@@ -190,7 +190,7 @@ tag: Books
   - Good features still allow you to solve problems more elegantly while using fewer resources.
   - Good features let you solve a problem with far less data. The ability of deep- learning models to learn features on their own relies on having lots of training data available; if you have only a few samples, then the information value in their features becomes critical.
 
-#####4.4 Overfitting and underfitting
+##### 4.4 Overfitting and underfitting
 
 - To prevent a model from learning misleading or irrelevant patterns found in the training data, the best solution is to get more training data. A model trained on more data will naturally generalize better. When that isn’t possible, the next-best solution is to modulate the quantity of information that your model is allowed to store or to add constraints on what information it’s allowed to store. If a network can only afford to memorize a small number of patterns, the optimization process will force it to focus on the most prominent patterns, which have a better chance of generalizing well.
 - Reducing the network’s size
@@ -206,7 +206,7 @@ tag: Books
   - At test time, no units are dropped out; instead, the layer’s output values are scaled down by a factor equal to the dropout rate, to balance for the fact that more units are active than at training time.（？）
   - noise in the output values of a layer can break up happenstance patterns that aren’t significant, which the network will start memorizing if no noise is present.
 
-#####4.5 The universal workflow of machine learning（好好学、七部曲
+##### 4.5 The universal workflow of machine learning（好好学、七部曲
 
 - Defining the problem and assembling a dataset
   - What will your input data be? What are you trying to predict?
