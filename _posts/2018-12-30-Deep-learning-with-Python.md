@@ -2,7 +2,7 @@
 layout: post
 title:  "Deep learning with Python Part 1"
 date:   2018-12-30 16:11:01 +0800
-categories: Deep Learning
+categories: DeepLearning
 tag: Books
 ---
 
