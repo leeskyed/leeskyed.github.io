@@ -10,7 +10,7 @@ tag: Paper
  * @Author: Leesky
  * @Date: 2019-01-05 11:32:26
  * @LastEditors: Leesky
- * @LastEditTime: 2019-01-05 11:49:11
+ * @LastEditTime: 2019-01-05 11:51:10
  -->
 
 <head>
@@ -130,9 +130,9 @@ tag: Paper
 - 无
 
 #### Reference
-注：这里直接copy论文的ref.
-[1] Wang, L., Wang, L., Lu, H., Zhang, P., Xiang, R.: Saliency detection with recurrent fully convolutional networks. In: European Conference on Computer Vision, pp. 825–841 (2016)
-[2] Liu, N., Han, J.: DHSNet: Deep Hierarchical Saliency Network for Salient Object Detection. In: 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), pp. 678–686 (2016). DOI 10.1109/CVPR.2016.80.
-[3] Kuen, J., Wang, Z., Wang, G.: Recurrent attentional networks for saliency detection. In: 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), p. 36683677 (2016).
-[4] Zhang, H., Goodfellow, I., Metaxas, D., Odena, A.: Self-Attention Generative Adversarial Networks (2018).
-[5] Liang, M., Hu, X.: Recurrent convolutional neural network for object recognition. pp. 3367–3375. IEEE Computer Society (2015). DOI 10.1109/CVPR.2015.7298958.
+ - 注：这里直接copy论文的ref.
+ - [1] Wang, L., Wang, L., Lu, H., Zhang, P., Xiang, R.: Saliency detection with recurrent fully convolutional networks. In: European Conference on Computer Vision, pp. 825–841 (2016)
+ - [2] Liu, N., Han, J.: DHSNet: Deep Hierarchical Saliency Network for Salient Object Detection. In: 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), pp. 678–686 (2016). DOI 10.1109/CVPR.2016.80.
+ - [3] Kuen, J., Wang, Z., Wang, G.: Recurrent attentional networks for saliency detection. In: 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), p. 36683677 (2016).
+ - [4] Zhang, H., Goodfellow, I., Metaxas, D., Odena, A.: Self-Attention Generative Adversarial Networks (2018).
+ - [5] Liang, M., Hu, X.: Recurrent convolutional neural network for object recognition. pp. 3367–3375. IEEE Computer Society (2015). DOI 10.1109/CVPR.2015.7298958.
