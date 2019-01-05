@@ -1,3 +1,10 @@
+<!--
+ * @Description: 
+ * @Author: Leesky
+ * @Date: 2019-01-05 08:54:29
+ * @LastEditors: Leesky
+ * @LastEditTime: 2019-01-05 11:40:47
+ -->
 ---
 layout: post
 title:  "Paper | Convolutional Self-Attention Network"
@@ -21,7 +28,8 @@ tag: Paper
 
 * content
 {:toc}
-#### Intro&Abstract：
+
+#### Intro&Abstract
 
 - 作者感觉NLP挺厉害的，刚发了两篇在EMNLP，这篇也算不错的，可以得到一些启发。
 
@@ -29,7 +37,7 @@ tag: Paper
 
 - 由于SAN的全并行计算和在模型依赖性中的灵活性，其最近吸引了很多注意力。它通过多头注意力机制让模型去获得不同表达子空间上不同位置的信息，来大大提高了SAN的性能。在这一工作中，我们提出了一个给与SAN如下能力的CSAN，1是捕捉邻居依赖性，2是模拟多注意力头之间的交互。在WMT14上的时间结果outperforms。和之前的工作相比，我们的模型不用添加新的参数。
 
-#### Contribution：
+#### Contribution
 
 - 和neighboring information的attention，其中attention functinon能够**根据内容不同的动态权重**成为一个filter，**并且能提升特征提取的性能**
 - 发掘multi-head之间的联系，其中self-attention的n-head是指将输入的channel分解成n个子空间，这样就能从不同角度来学习他们之间的联系，同时也能并行计算。单纯的concatenation会丢失机会去发掘head之间不同特征的联系
@@ -41,7 +49,7 @@ tag: Paper
 - Wu and He (2018) 说特征能够更好的被cpatured 通过模拟不同channels之间的依赖[1]
 
 #### CSAN
-
+- ![CSAN](/image/CSAN/CSAN.png)
 - 1D-CSAN，其中attention weight这样算
 
   - 
