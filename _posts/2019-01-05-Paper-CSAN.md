@@ -1,10 +1,3 @@
-<!--
- * @Description: 
- * @Author: Leesky
- * @Date: 2019-01-05 08:54:29
- * @LastEditors: Leesky
- * @LastEditTime: 2019-01-05 11:40:47
- -->
 ---
 layout: post
 title:  "Paper | Convolutional Self-Attention Network"
@@ -12,6 +5,13 @@ date:   2019-01-05 09:24:01 +0800
 categories: ComputerVision
 tag: Paper
 ---
+<!--
+ * @Description: 
+ * @Author: Leesky
+ * @Date: 2019-01-05 08:54:29
+ * @LastEditors: Leesky
+ * @LastEditTime: 2019-01-05 11:49:13
+ -->
 
 <head>
     <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>

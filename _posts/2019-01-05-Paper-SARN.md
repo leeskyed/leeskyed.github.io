@@ -1,10 +1,3 @@
-<!--
- * @Description: 
- * @Author: Leesky
- * @Date: 2019-01-05 11:32:26
- * @LastEditors: Leesky
- * @LastEditTime: 2019-01-05 11:45:57
- -->
 ---
 layout: post
 title:  "Paper | Self-Attention Recurrent Network"
@@ -12,6 +5,13 @@ date:   2019-01-05 11:32:26 +0800
 categories: ComputerVision
 tag: Paper
 ---
+<!--
+ * @Description: 
+ * @Author: Leesky
+ * @Date: 2019-01-05 11:32:26
+ * @LastEditors: Leesky
+ * @LastEditTime: 2019-01-05 11:49:11
+ -->
 
 <head>
     <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
