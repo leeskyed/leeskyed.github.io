@@ -10,8 +10,20 @@ tag:
  * @Author: Leesky
  * @Date: 2019-01-10 11:53:26
  * @LastEditors: Leesky
- * @LastEditTime: 2019-01-10 11:56:29
+ * @LastEditTime: 2019-01-10 12:16:18
  -->
+
+<head>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            inlineMath: [['$','$']]
+            }
+        });
+    </script>
+</head>
 
 
 * content
@@ -50,7 +62,21 @@ I don’t know much about convolutional sparse coding but it appears to me from 
 
 我对卷积稀疏编码知之甚少，但在浏览一些论文的过程中我发现，这些论文使用了前一种“反卷积”，即转置卷积，使图像从卷积生成的稀疏图像表示回到原始图像分辨率。 （很高兴这一点能够被纠正。）
 
+---
 
+
+再补几个从知乎看到的答案，言简意赅。[4]
+- 上采样就是把[W,H]大小的feature map $F_{W,H}$扩大为[nW,nH]尺寸大小的${F}_{nW,nH}$，其中n为上采样倍数。那么可以很容易的想到我们可以在扩大的feature map ${F}$上每隔n个位置填补原F中对应位置的值。但是剩余的那些位置怎么办呢？deconv操作是把剩余位置填0，然后这个大feature map过一个conv。扩大+填0+conv = deconv操作。插值上采样类似，扩大+插值=插值上采样操作。还有一个unpooling操作，如果是max unpooling，那么在接受[W,H]大小的feature map之外还需要接收一个pooling的index，表示F[w,h]在${F}$中的对应位置。一般max unpooling需要和max pooling对应。 max pooling+max unpooling等价于在F上筛一遍，只保留pooling window中max位置的值。
+
+- Upsampling是上采样的过程，caffe中实现的deconvolution是upsampling的一种方式，源码来看的话，用的是bilinear。
+
+- 实际使用过程中，会把deconv层的卷积核设置成为双线性插值，学习率设置成为0。因为很多论文表明，学习率变化与否，对于性能没有差距。
+
+
+---
+**CAFFE detailed descriptions**
+
+Convolve the input with a bank of learned filters, and (optionally) add biases, treating filters and convolution parameters in the opposite sense as ConvolutionLayer.ConvolutionLayer computes each output value by dotting an input window with a filter; DeconvolutionLayer multiplies each input value by a filter elementwise, and sums over the resulting output windows. In other words, **DeconvolutionLayer is ConvolutionLayer with the forward and backward passes reversed. DeconvolutionLayer reuses ConvolutionParameter for its parameters, but they take the opposite sense as in ConvolutionLayer (so padding is removed from the output rather than added to the input, and stride results in upsampling rather than downsampling)**.
 
 ---
 
@@ -62,10 +88,14 @@ I don’t know much about convolutional sparse coding but it appears to me from 
 
 昨天看了一篇全卷积做salient object detection的，觉得自己对卷积和全卷积网络还是很浅，补一补[2]和[3].
 
-
+---
 
 [1] Learning Deconvolution Network for Semantic Segmentation
 
 [2] Fully Convolutional Networks for Semantic Segmentation
 
 [3] Visualizing and Understanding Convolutional Networks
+
+[4] https://www.zhihu.com/question/63890195/answer/214228245
+
+[5] http://caffe.berkeleyvision.org/doxygen/classcaffe_1_1DeconvolutionLayer.html
