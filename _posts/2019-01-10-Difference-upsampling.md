@@ -23,13 +23,13 @@ tag:
 
 ---
 
-Upsampling refers to any technique that, well, upsamples your image to a higher resolution.
+**Upsampling refers to any technique that**, well, upsamples your image to a higher resolution.
 
-The easiest way is using resampling and interpolation. This is taking an input image, rescaling it to the desired size and then calculating the pixel values at each point using a interpolation method such as bilinear interpolation.
+The easiest way is using resampling and interpolation. This is taking an input image, rescaling it to the desired size and then calculating the pixel values at each point using a interpolation method such as **bilinear interpolation**.
 
-Unpooling is commonly used in the context of convolutional neural networks to denote reverse max pooling. Citing from this paper: Unpooling: In the convnet, the max pooling operation is non-invertible, however we can obtain an approximate inverse by recording the locations of the maxima within each pooling region in a set of switch variables. In the deconvnet, the unpooling operation uses these switches to place the reconstructions from the layer above into appropriate locations, preserving the structure of the stimulus.
+Unpooling is commonly used in the context of convolutional neural networks to denote reverse max pooling. Citing from this paper: Unpooling: In the convnet, the max pooling operation is non-invertible, however we can obtain an approximate inverse by **recording the locations of the maxima within each pooling region in a set of switch variables.** In the deconvnet, the unpooling operation uses these switches to place the reconstructions from the layer above into appropriate locations, preserving the structure of the stimulus.
 
-Deconvolution in the context of convolutional neural networks is often used to denote a sort of reverse convolution, which importantly and confusingly is not actually a proper mathematical deconvolution. In contrast to unpooling, using ‘deconvolution’ the upsampling of an image can be learned. It is often used for upsampling the output of a convnet to the original image resolution. I wrote another answer on this topic here. Deconvolution is more appropriately also referred to as convolution with fractional strides, or transpose convolution.
+Deconvolution in the context of convolutional neural networks is often used to denote a sort of reverse convolution, which importantly and confusingly **is not actually a proper mathematical deconvolution.** In contrast to unpooling, **using ‘deconvolution’ the upsampling of an image can be learned**. It is often used for **upsampling the output of a convnet to the original image resolution**. I wrote another answer on this topic here. Deconvolution is more appropriately also referred to as convolution with fractional strides, or transpose convolution.
 
 Then there is proper deconvolution which reverses the effect of a convolution (Deconvolution - Wikipedia). I don’t think people actually use this in the context of convolutional neural networks.
 
